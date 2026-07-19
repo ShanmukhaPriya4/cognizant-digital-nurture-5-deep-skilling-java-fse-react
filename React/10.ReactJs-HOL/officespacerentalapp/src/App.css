@@ -1,0 +1,16 @@
+.App{
+  margin-left: 120px;
+  font-family: Arial;
+}
+
+.textRed{
+  color: red;
+}
+
+.textGreen{
+  color: green;
+}
+
+img{
+  margin-bottom: 10px;
+}

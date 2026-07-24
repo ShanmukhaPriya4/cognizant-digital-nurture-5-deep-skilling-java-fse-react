@@ -1,0 +1,14 @@
+<h1>Available Courses</h1>
+
+<div class="course-list">
+  @for (c of courses; track c.id) {
+    <app-course-card
+      [course]="c"
+      (enrollRequested)="onEnroll($event)">
+    </app-course-card>
+  }
+</div>
+
+@if (selectedCourseId !== null) {
+  <p>Selected course ID: {{ selectedCourseId }}</p>
+}

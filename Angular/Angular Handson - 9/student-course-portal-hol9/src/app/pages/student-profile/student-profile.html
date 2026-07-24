@@ -1,0 +1,25 @@
+<h1>Student Profile</h1>
+
+<h2>My Enrolled Courses</h2>
+
+<div *ngIf="enrolledCourses$ | async as courses">
+
+  <div *ngIf="courses.length === 0">
+    <p>You have not enrolled in any courses yet.</p>
+  </div>
+
+  <div *ngFor="let course of courses">
+
+    <h3>{{ course.name }}</h3>
+
+    <p>Course Code: {{ course.code }}</p>
+
+    <p>Credits: {{ course.credits }}</p>
+
+    <p>Grade Status: {{ course.gradeStatus }}</p>
+
+    <hr>
+
+  </div>
+
+</div>

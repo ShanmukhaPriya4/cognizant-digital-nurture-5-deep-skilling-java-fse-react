@@ -1,0 +1,35 @@
+<h1>Enrolled Students</h1>
+
+<div *ngIf="isLoading">
+  <p>Loading students...</p>
+</div>
+
+<div *ngIf="errorMessage">
+  <p>{{ errorMessage }}</p>
+</div>
+
+<div
+  *ngIf="!isLoading && !errorMessage"
+>
+
+  <p *ngIf="students.length === 0">
+    No students enrolled in this course.
+  </p>
+
+  <div
+    *ngFor="let student of students"
+  >
+
+    <h2>
+      {{ student.name }}
+    </h2>
+
+    <p>
+      Email: {{ student.email }}
+    </p>
+
+    <hr>
+
+  </div>
+
+</div>

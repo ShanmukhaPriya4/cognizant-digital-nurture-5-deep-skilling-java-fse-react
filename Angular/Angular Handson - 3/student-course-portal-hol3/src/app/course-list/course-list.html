@@ -1,0 +1,5 @@
+<app-course-card
+  *ngFor="let course of courses; let i = index; trackBy: trackByCourseId"
+  [course]="course"
+  appHighlight="lightblue">
+</app-course-card>

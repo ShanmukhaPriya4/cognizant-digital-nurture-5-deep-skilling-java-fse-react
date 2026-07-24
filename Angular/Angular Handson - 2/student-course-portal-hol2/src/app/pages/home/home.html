@@ -1,0 +1,30 @@
+<h1>{{ portalName }}</h1>
+
+<p>Welcome to the Student Course Portal.</p>
+
+<button
+  [disabled]="!isPortalActive"
+  (click)="onEnrollClick()">
+  Enroll Now
+</button>
+
+<p>{{ message }}</p>
+
+<hr>
+
+<h2>Search Courses</h2>
+
+<input
+  type="text"
+  placeholder="Search for a course"
+  [(ngModel)]="searchTerm">
+
+<p>Searching for: {{ searchTerm }}</p>
+
+<!--
+[property] is one-way binding:
+data flows from the component to the DOM.
+
+[(ngModel)] is two-way binding:
+data flows between the component and the DOM.
+-->

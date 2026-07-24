@@ -1,0 +1,53 @@
+<h1>Available Courses</h1>
+
+<!-- Loading message -->
+<div *ngIf="isLoading">
+  <p>Loading courses...</p>
+</div>
+
+<!-- Error message -->
+<div *ngIf="errorMessage">
+
+  <p>
+    {{ errorMessage }}
+  </p>
+
+  <button
+    type="button"
+    (click)="loadCourses()"
+  >
+    Try Again
+  </button>
+
+</div>
+
+<!-- Course list -->
+<div
+  *ngIf="!isLoading && !errorMessage"
+>
+
+  <div
+    *ngFor="let course of courses"
+  >
+
+    <h2>
+      {{ course.name }}
+    </h2>
+
+    <p>
+      Code: {{ course.code }}
+    </p>
+
+    <p>
+      Credits: {{ course.credits }}
+    </p>
+
+    <p>
+      Grade Status: {{ course.gradeStatus }}
+    </p>
+
+    <hr>
+
+  </div>
+
+</div>
